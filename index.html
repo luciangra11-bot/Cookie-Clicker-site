@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cookie.Clicker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cookie Clicker</h1>
+    <div class="stats">
+      <div class="stat">
+        <span class="label">Cookies</span>
+        <span id="cookieCount">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Cookies per second</span>
+        <span id="cps">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Cookies per click</span>
+        <span id="cpc">1</span>
+      </div>
+    </div>
+
+    <button id="cookieButton" class="big-button">Click the Cookie</button>
+
+    <div class="upgrades">
+      <div class="upgrade-card">
+        <h2>Cursor</h2>
+        <p>Adds +1 CPS</p>
+        <button id="buyCursor">Buy (15 cookies)</button>
+        <p class="detail">Owned: <span id="cursorCount">0</span></p>
+      </div>
+      <div class="upgrade-card">
+        <h2>Grandma</h2>
+        <p>Adds +5 CPS</p>
+        <button id="buyGrandma">Buy (100 cookies)</button>
+        <p class="detail">Owned: <span id="grandmaCount">0</span></p>
+      </div>
+      <div class="upgrade-card">
+        <h2>Strength</h2>
+        <p>Adds +1 cookie per click</p>
+        <button id="buyStrength">Buy (50 cookies)</button>
+        <p class="detail">Owned: <span id="strengthCount">0</span></p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="saveButton" class="small-button">Save Progress</button>
+      <button id="resetButton" class="small-button">Reset Game</button>
+      <p class="save-status" id="saveStatus">Autosaves every 5 seconds.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
