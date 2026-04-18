@@ -1,0 +1,166 @@
+:root {
+  --bg: #2f2b32;
+  --surface: #3f3a44;
+  --accent: #f9a825;
+  --text: #eceff1;
+  --muted: #b0bec5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #4b4260 0%, #221c2e 100%);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  width: min(100%, 860px);
+  background: rgba(18, 16, 24, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 24px;
+  letter-spacing: 0.08em;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.label {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+#cookieCount,
+#cps,
+#cpc {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.big-button {
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 22px;
+  background: linear-gradient(135deg, #ffecb3, #f9a825);
+  color: #222;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.big-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(249, 168, 37, 0.2);
+}
+
+.upgrades {
+  display: grid;
+  gap: 18px;
+}
+
+.upgrade-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.upgrade-card h2 {
+  margin: 0 0 4px;
+}
+
+.upgrade-card p {
+  margin: 8px 0;
+}
+
+.upgrade-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: #55516a;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.upgrade-card button:hover {
+  background: #6e6b82;
+}
+
+.upgrade-card button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.small-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 14px;
+  background: #6e6b82;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.small-button:hover {
+  background: #7f7b94;
+  transform: translateY(-1px);
+}
+
+.save-status {
+  flex: 1 1 100%;
+  margin: 0;
+  color: var(--muted);
+}
+
+.detail {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding: 20px;
+  }
+  .big-button {
+    padding: 18px;
+  }
+}
